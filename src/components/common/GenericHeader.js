@@ -1,16 +1,12 @@
-import React, { Component } from 'react';
-import { Link } from "react-router-dom";
-import { BsGrid, BsListUl } from "react-icons/bs";
-import Select from "react-select";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { BsGrid, BsListUl } from 'react-icons/bs';
+import Select from 'react-select';
 
-const shortby = [
-  {
-    value: 0,
-    label: 'Short by'
-  },
+const sortBy = [
   {
     value: 1,
-    label: 'Short by default'
+    label: 'Default'
   },
   {
     value: 2,
@@ -23,90 +19,44 @@ const shortby = [
   {
     value: 4,
     label: 'Popular Listing'
-  },
-  {
-    value: 5,
-    label: 'Newest Listing'
-  },
-  {
-    value: 6,
-    label: 'Older Listing'
-  },
-  {
-    value: 7,
-    label: 'Price: low to high'
-  },
-  {
-    value: 8,
-    label: 'Price: high to low'
-  },
-  {
-    value: 9,
-    label: 'Price: high to low'
-  },
-  {
-    value: 10,
-    label: 'Random listing'
   }
-]
+];
 
-class GenericHeader extends Component {
-  state = {
-    selectedCatOp: null,
-    title: 'Showing 1 to 6 of 30 entries',
-    navs: [
-      {
-        path: '/listing-list',
-        icon: <BsListUl />,
-        active: false,
-      },
-      {
-        path: '/listing-grid',
-        icon: <BsGrid />,
-        active: true,
-      }
-    ],
+const GenericHeader = ({ current, total }) => {
+  const [selectedSortBy, setSelectedSortBy] = useState(null);
 
-  }
+  return (
+    <>
+      <div className="generic-header margin-bottom-30px">
+        <p className="showing__text text-left">
+          Showing {current} of {total} entries
+        </p>
 
-  handleChangeshortby = () => {
-    const { selectedShortby } = this.state;
-    this.setState(
-      { selectedShortby }
-    );
-  }
-  render() {
-    return (
-      <>
-        <div className="generic-header margin-bottom-30px">
-          <p className="showing__text text-left">
-            {this.state.title}
-          </p>
-          <div className="short-option mr-3">
-            <Select
-              value={this.selectedShortby}
-              onChange={this.handleChangeshortby}
-              placeholder="Short by"
-              options={shortby}
-            />
-          </div>
-          <ul className="generic-nav">
-            {this.state.navs.map((item, index) => {
-              return (
-                <li key={index}>
-                  <Link to={item.path} className={item.active ? 'active' : ' '}>
-                    <span className="d-inline-block">
-                      {item.icon}
-                    </span>
-                  </Link>
-                </li>
-              )
-            })}
-          </ul>
+        <div className="short-option mr-3">
+          <Select
+            value={selectedSortBy}
+            onChange={setSelectedSortBy}
+            placeholder="Sort by"
+            options={sortBy}
+          />
         </div>
-      </>
-    );
-  }
-}
+
+        <ul className="generic-nav">
+          <li>
+            <Link to="/listing-grid" className="active">
+              <span className="d-inline-block"><BsGrid /></span>
+            </Link>
+          </li>
+
+          <li>
+            <Link to="/listing-list">
+              <span className="d-inline-block"><BsListUl /></span>
+            </Link>
+          </li>
+        </ul>
+      </div>
+    </>
+  );
+};
 
 export default GenericHeader;

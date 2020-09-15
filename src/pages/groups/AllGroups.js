@@ -2,8 +2,8 @@ import React, { useContext } from 'react';
 import GeneralHeader from '../../components/common/GeneralHeader';
 import Breadcrumb from '../../components/common/Breadcrumb';
 import GroupsGrid from '../../components/places/GroupsGrid';
-import Button from '../../components/common/Button';
-import { FiRefreshCw } from 'react-icons/fi';
+// import Button from '../../components/common/Button';
+// import { FiRefreshCw } from 'react-icons/fi';
 import NewsLetter from '../../components/other/cta/NewsLetter';
 import Footer from '../../components/common/footer/Footer';
 import ScrollTopBtn from '../../components/common/ScrollTopBtn';
@@ -30,7 +30,7 @@ const AllGroups = () => {
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
-              <GenericHeader />
+              <GenericHeader current={groups.length} total={groups.length} />
             </div>
           </div>
 
@@ -38,7 +38,7 @@ const AllGroups = () => {
             <GroupsGrid groups={groups} />
           </div>
 
-          <div className="row">
+          {/* <div className="row">
             <div className="col-lg-12">
               <div className="button-shared mt-4 text-center">
                 <Button text="Load More" url="#">
@@ -48,7 +48,7 @@ const AllGroups = () => {
                 </Button>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
 

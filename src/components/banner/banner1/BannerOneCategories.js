@@ -1,27 +1,15 @@
 import React, { useContext } from 'react';
-import { CategoriesContext } from '../../../contexts';
 import { Link } from 'react-router-dom';
+
+import { CategoriesContext } from '../../../contexts';
 
 const BannerOneCategories = () => {
   const [categoriesData] = useContext(CategoriesContext);
-
   const { categories, hasCategories } = categoriesData;
-
-  if (!hasCategories) return null;
 
   const featuredCategories = categories.filter(({ isFeatured }) => isFeatured);
 
-  if (featuredCategories.length === 0) {
-    return (
-      <>
-        <div className="highlighted-categories">
-          <h5 className="highlighted__title">
-            no featured categories
-          </h5>
-        </div>
-      </>
-    );
-  }
+  if (!hasCategories || featuredCategories.length === 0) return null;
 
   return (
     <>
