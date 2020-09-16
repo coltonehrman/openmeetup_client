@@ -5,6 +5,7 @@ import AddCategory from './pages/categories/AddCategory';
 import AllCategories from './pages/categories/AllCategories';
 import AddGroup from './pages/groups/AddGroup';
 import AllGroups from './pages/groups/AllGroups';
+import GroupDetails from './pages/groups/GroupDetails';
 import Dashboard from './pages/dashboard/Dashboard';
 import About from './pages/About';
 import Faq from './pages/FAQ';
@@ -38,6 +39,7 @@ const App = () => {
                 <Route path="/all-categories" component={AllCategories} />
                 <Route path="/add-group" component={AddGroup} />
                 <Route path="/all-groups" component={AllGroups} />
+                <Route path="/groups/:groupId" component={GroupDetails} />
                 <Route path="/dashboard" component={Dashboard} />
                 <Route path="/about" component={About} />
                 <Route path="/faq" component={Faq} />

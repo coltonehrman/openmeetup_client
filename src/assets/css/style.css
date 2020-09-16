@@ -3032,7 +3032,7 @@ select, .sidebar-widget select, .sidebar-option select, .generic-header .short-o
  ====================================================*/
 
 .listing-detail-breadcrumb {
-  background-image: url("../images/bread-bg2.jpg");
+  background-color: rgb(78, 88, 108);
   overflow: inherit;
   z-index: 2;
 }
