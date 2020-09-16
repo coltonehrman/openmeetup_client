@@ -10,7 +10,6 @@ import { FiPhone, FiEdit } from 'react-icons/fi';
 import { AiOutlineUser, AiOutlinePlusCircle, AiOutlinePoweroff, AiOutlineYoutube, AiOutlineExclamationCircle } from 'react-icons/ai';
 import Button from '../../components/common/Button';
 import $ from 'jquery';
-import NewsLetter from '../../components/other/cta/NewsLetter';
 import Footer from '../../components/common/footer/Footer';
 import ScrollTopBtn from '../../components/common/ScrollTopBtn';
 
@@ -77,10 +76,7 @@ const Dashboard = () => {
 
   return (
     <main className="dashboard-page">
-      {/* Header */}
       <GeneralHeader />
-
-      {/* Breadcrumb */}
       <Breadcrumb CurrentPgTitle="Dashboard" MenuPgTitle="pages" />
 
       <section className="dashboard-area padding-top-40px padding-bottom-90px">
@@ -304,12 +300,7 @@ const Dashboard = () => {
         </div>
       </section>
 
-      {/* Newsletter */}
-      <NewsLetter />
-
-      {/* Footer */}
       <Footer />
-
       <ScrollTopBtn />
 
       {/* Modal */}

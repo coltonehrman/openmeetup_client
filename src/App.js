@@ -7,10 +7,6 @@ import AddGroup from './pages/groups/AddGroup';
 import AllGroups from './pages/groups/AllGroups';
 import GroupDetails from './pages/groups/GroupDetails';
 import Dashboard from './pages/dashboard/Dashboard';
-import About from './pages/About';
-import Faq from './pages/FAQ';
-import Contact from './pages/Contact';
-import RecoverPassword from './pages/RecoverPassword';
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
 import Error from './pages/Error';
@@ -22,9 +18,12 @@ import {
   GlobalErrorContextProvider
 } from './contexts';
 
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel/dist/assets/owl.theme.default.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/css/style.css';
 import './App.css';
+import './index.css';
 
 const App = () => {
   return (
@@ -41,10 +40,6 @@ const App = () => {
                 <Route path="/all-groups" component={AllGroups} />
                 <Route path="/groups/:groupId" component={GroupDetails} />
                 <Route path="/dashboard" component={Dashboard} />
-                <Route path="/about" component={About} />
-                <Route path="/faq" component={Faq} />
-                <Route path="/contact" component={Contact} />
-                <Route path="/recover" component={RecoverPassword} />
                 <Route path="/login" component={Login} />
                 <Route path="/sign-up" component={SignUp} />
                 <Route component={Error} />

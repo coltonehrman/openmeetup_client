@@ -5,7 +5,6 @@ import GroupDetailsBreadcrumb from './GroupDetailsBreadcrumb';
 import GroupDetailsSidebar from '../../components/sidebars/GroupDetailsSidebar';
 import GeneralMap from '../../components/contact/GeneralMap';
 import EventsCarousel from '../../components/places/EventsCarousel';
-import NewsLetter from '../../components/other/cta/NewsLetter';
 import Footer from '../../components/common/footer/Footer';
 import ScrollTopBtn from '../../components/common/ScrollTopBtn';
 import _ from 'lodash';
@@ -46,10 +45,7 @@ const GroupDetails = ({ match }) => {
 
   return (
     <main className="listing-details">
-      {/* Header */}
       <GeneralHeader />
-
-      {/* Breadcrumb */}
       <GroupDetailsBreadcrumb title={title} location={location} categories={categories} />
 
       <section className="single-listing-area padding-top-35px padding-bottom-50px">
@@ -98,15 +94,10 @@ const GroupDetails = ({ match }) => {
         </div>
       </section>
 
-      {/* Newsletter */}
-      <NewsLetter />
-
-      {/* Footer */}
       <Footer />
-
       <ScrollTopBtn />
     </main>
   );
-}
+};
 
 export default GroupDetails;

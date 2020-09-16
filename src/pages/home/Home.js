@@ -3,17 +3,13 @@ import GeneralHeader from '../../components/common/GeneralHeader';
 import BannerOne from '../../components/banner/banner1/BannerOne';
 import SectionsHeading from '../../components/common/SectionsHeading';
 import BrowseCategories from '../../components/other/categories/BrowseCategories';
-import NewsLetter from '../../components/other/cta/NewsLetter';
 import Footer from '../../components/common/footer/Footer';
 import ScrollTopBtn from '../../components/common/ScrollTopBtn';
 
 const Home = () => {
   return (
     <main className="home-1">
-      {/* Header */}
       <GeneralHeader />
-
-      {/* Hero Banner */}
       <BannerOne />
 
       {/* Popular Categories */}
@@ -27,12 +23,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* NewsLetter */}
-      <NewsLetter />
-
-      {/* Footer */}
       <Footer />
-
       <ScrollTopBtn />
     </main>
   );

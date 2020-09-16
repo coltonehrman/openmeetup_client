@@ -3,7 +3,6 @@ import { BsPencil, BsChatQuote } from 'react-icons/bs';
 
 import GeneralHeader from '../../components/common/GeneralHeader';
 import Breadcrumb from '../../components/common/Breadcrumb';
-import NewsLetter from '../../components/other/cta/NewsLetter';
 import Footer from '../../components/common/footer/Footer';
 import ScrollTopBtn from '../../components/common/ScrollTopBtn';
 
@@ -47,10 +46,7 @@ const AddCategory = () => {
 
   return (
     <main className="add-listing">
-      {/* Header */}
       <GeneralHeader />
-
-      {/* Breadcrumb */}
       <Breadcrumb CurrentPgTitle="Add Category" MenuPgTitle="Categories" />
 
       {/* Add Listing */}
@@ -143,14 +139,8 @@ const AddCategory = () => {
         </div>
       </section>
 
-      {/* Newsletter */}
-      <NewsLetter />
-
-      {/* Footer */}
       <Footer />
-
       <ScrollTopBtn />
-
     </main>
   );
 };

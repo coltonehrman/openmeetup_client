@@ -4,9 +4,6 @@ import { AiOutlineEye } from 'react-icons/ai';
 import { FiHeart } from 'react-icons/fi';
 import { FaRegCalendarCheck } from 'react-icons/fa';
 
-import 'owl.carousel/dist/assets/owl.carousel.css';
-import 'owl.carousel/dist/assets/owl.theme.default.css';
-
 const EventsCarousel = ({ events }) => {
   if (!events || events.length <= 0) return null;
 

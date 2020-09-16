@@ -2,9 +2,6 @@ import React, { useContext } from 'react';
 import GeneralHeader from '../../components/common/GeneralHeader';
 import Breadcrumb from '../../components/common/Breadcrumb';
 import GroupsGrid from '../../components/places/GroupsGrid';
-// import Button from '../../components/common/Button';
-// import { FiRefreshCw } from 'react-icons/fi';
-import NewsLetter from '../../components/other/cta/NewsLetter';
 import Footer from '../../components/common/footer/Footer';
 import ScrollTopBtn from '../../components/common/ScrollTopBtn';
 import GenericHeader from '../../components/common/GenericHeader';
@@ -19,10 +16,7 @@ const AllGroups = () => {
 
   return (
     <main className="listing-grid">
-      {/* Header */}
       <GeneralHeader />
-
-      {/* Breadcrumb */}
       <Breadcrumb CurrentPgTitle="All Groups" MenuPgTitle="Groups" />
 
       {/* Place Grid */}
@@ -37,27 +31,10 @@ const AllGroups = () => {
           <div className="row">
             <GroupsGrid groups={groups} />
           </div>
-
-          {/* <div className="row">
-            <div className="col-lg-12">
-              <div className="button-shared mt-4 text-center">
-                <Button text="Load More" url="#">
-                  <span className="la">
-                    <FiRefreshCw />
-                  </span>
-                </Button>
-              </div>
-            </div>
-          </div> */}
         </div>
       </section>
 
-      {/* Newsletter */}
-      <NewsLetter />
-
-      {/* Footer */}
       <Footer />
-
       <ScrollTopBtn />
     </main>
   );
